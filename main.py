@@ -62,3 +62,26 @@ user_data = user_report()
 st.subheader('Patient Data')
 st.write(user_data)
 
+#Seperate Outcome column and make X,Y
+X= df.drop(columns='Outcome', axis=1)
+Y=df['Outcome']
+
+#Standard Scalar
+scaler = StandardScaler()
+#fit on X
+scaler.fit(X)
+
+#Store Standardized X data
+standard_data = scaler.transform(X)
+
+#Load standadized data back to X
+X = standard_data
+# split data
+X_train,X_test,Y_train,Y_test = train_test_split(X,Y,test_size=0.2)
+
+#Classification-vector classifier
+clf=svm.SVC(kernel='linear')
+
+#Train dataset
+clf.fit(X_train,Y_train)
+
