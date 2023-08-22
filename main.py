@@ -85,3 +85,13 @@ clf=svm.SVC(kernel='linear')
 #Train dataset
 clf.fit(X_train,Y_train)
 
+#Insert navbar data into numpy array
+input_sample = np.array(user_data)
+
+#Reshape the array
+input_npArray_reshaped = input_sample.reshape(1, -1)
+#Store Standardized sample data
+std_data = scaler.transform(input_npArray_reshaped)
+
+
+
