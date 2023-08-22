@@ -98,10 +98,14 @@ predict = clf.predict(std_data)
 st.subheader('Your Diabetic Report: ')
 output=''
 if predict[0]==0:
-  output = 'Congrats !! You are not Diabetic'
+  output = 'Congrats !! You are not Diabetic 😇'
 else:
-  output = 'Sorry...You are Diabetic'
+  output = 'Sorry...You are Diabetic 😔'
 st.title(output)
+
+#Measure accuracy of Report
+st.subheader('Accuracy: ')
+st.write(str(accuracy_score(Y_test, clf.predict(X_test))*100)+'%')
 
 
 
