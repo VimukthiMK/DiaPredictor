@@ -1,4 +1,4 @@
-# Diabetes Checker App
+# Diabetes Checker
 
 This project is a simple web application built using Streamlit and scikit-learn that predicts whether a person is diabetic or not based on their health metrics. It uses a Support Vector Machine (SVM) classifier for prediction and provides an interface for users to input their health data and receive predictions.
 
@@ -8,17 +8,17 @@ To run the Diabetes Checker app on your local machine, follow these steps:
 
 1. Clone the repository to your local machine:
    ```sh
-   git clone https://github.com/yourusername/diabetes-checker.git
+   git clone https://github.com/VimukthiMK/DiaPredictor.git
 2. Navigate to the project directory:
    ```sh
-   cd diabetes-checker
+   cd DiaPredictor
 3. Install the required dependencies. It's recommended to set up a virtual environment before installing the dependencies:
    ```sh
    pip install -r requirements.txt
 
 4. Run the Streamlit app:
    ```sh
-   streamlit run app.py
+   streamlit run main.py
 
 ## Project Structure
 
