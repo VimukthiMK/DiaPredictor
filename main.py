@@ -21,6 +21,11 @@ df=pd.read_csv('./data/diabetes.csv')
 # Headings of app
 st.title('DiaPredictor -Live Diabetes Checker')
 
+#Visualize Training Data Description
+st.subheader('Training Data Stats')
+st.write(df.describe())
+
+
 # SideBar
 st.sidebar.header('Patient Data')
 st.sidebar.write('Please Adjust Your Values')
@@ -47,5 +52,13 @@ def user_report():
       'Age':age
   }
 
+#Insert Navbar data to a Dataframe
+  report_data = pd.DataFrame(user_report_data, index=[0])
+  return report_data
 
+
+# Patient data
+user_data = user_report()
+st.subheader('Patient Data')
+st.write(user_data)
 
