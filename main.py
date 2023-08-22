@@ -93,5 +93,16 @@ input_npArray_reshaped = input_sample.reshape(1, -1)
 #Store Standardized sample data
 std_data = scaler.transform(input_npArray_reshaped)
 
+# OUTPUT
+predict = clf.predict(std_data)
+st.subheader('Your Diabetic Report: ')
+output=''
+if predict[0]==0:
+  output = 'Congrats !! You are not Diabetic'
+else:
+  output = 'Sorry...You are Diabetic'
+st.title(output)
+
+
 
 
