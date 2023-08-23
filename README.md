@@ -9,14 +9,12 @@ To run the Diabetes Checker app on your local machine, follow these steps:
 1. Clone the repository to your local machine:
    ```sh
    git clone https://github.com/VimukthiMK/DiaPredictor.git
-2. Navigate to the project directory:
-   ```sh
-   cd DiaPredictor
-3. Install the required dependencies. It's recommended to set up a virtual environment before installing the dependencies:
+   
+2. Install the required dependencies. It's recommended to set up a virtual environment before installing the dependencies:
    ```sh
    pip install -r requirements.txt
 
-4. Run the Streamlit app:
+3. Run the Streamlit app:
    ```sh
    streamlit run main.py
 
